@@ -98,10 +98,10 @@ document.getElementById("scrollTopBtn").onclick = function () {
 // Loader hide logic
 window.addEventListener("load", function () {
   const loader = document.getElementById("loader");
-  if (loader) {
+  // Keep loader for 5 seconds after load
+  setTimeout(() => {
     loader.classList.add("hide");
-    setTimeout(() => {
-      loader.parentNode.removeChild(loader);
-    }, 1600); // Wait for slow fade-out transition
-  }
+    // Wait for the fade-out transition to finish before removing from layout
+    setTimeout(() => (loader.style.display = "none"), 2000); // match transition duration
+  }, 5000); // 5 seconds visible before fade-out
 });

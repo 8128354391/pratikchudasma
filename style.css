@@ -109,6 +109,7 @@ body {
         align-items: start;
         padding: 10px;
         animation: slideInDown 1s ease;
+        overflow-x: hidden;
     }
 
     .header-left {
@@ -304,6 +305,7 @@ body {
         margin-bottom: 30px;
         position: relative;
         padding: 10px;
+        overflow-x: hidden;
     }
 
     .main-left {
@@ -705,6 +707,7 @@ body {
         /* width: 100%; */
         min-height: 100vh;
         position: sticky;
+        overflow-x: hidden;
     }
 
     .services-header {
@@ -1170,6 +1173,7 @@ body {
         padding: 60px 10px;
         margin-top: 0;
         min-height: 100vh;
+        overflow-x: hidden;
     }
 
     .selected-works-header {
@@ -1399,6 +1403,7 @@ body {
         flex-direction: column;
         border-bottom-right-radius: 30px;
         border-bottom-left-radius: 30px;
+        overflow-x: hidden;
     }
 
     .hero-arrow {
@@ -1730,6 +1735,7 @@ body {
         gap: 0px;
         padding: 20px 10px;
         border-bottom: 1px solid #22222263;
+        overflow-x: hidden;
     }
 
     .testimonials-title {
@@ -1779,6 +1785,7 @@ body {
     .testimonial-slider {
         padding: 40px 10px;
         position: relative;
+        overflow-x: hidden;
     }
 
     .testimonial-slider-header {
@@ -2052,6 +2059,7 @@ body {
         overflow: hidden;
         border-radius: 12px;
         padding: 40px 10px;
+        overflow-x: hidden;
     }
 
     .cta-content {
@@ -2264,6 +2272,7 @@ body {
         color: #222;
         /* border-top: 1px solid #e0e0dc; */
         position: relative;
+        overflow-x: hidden;
     }
 
     .footer-columns {

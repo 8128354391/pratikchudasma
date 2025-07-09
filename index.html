@@ -11,15 +11,10 @@
 
 <body>
     
-    <div id="loader" class="loader-overlay">
-        <div class="loader-content">
-            <div class="bouncing-dots">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
-            <div class="loader-text">Loading...</div>
-        </div>
+    <div id="loader">
+        <div class="loader-overlay"></div>
+        <div class="loader-spinner"></div>
+        <span class="loader-text">Welcome to my portfolio</span>
     </div>
 
     <header class="header">
@@ -314,6 +309,12 @@
         }
 
         requestAnimationFrame(raf);
+
+        window.addEventListener('load', function() {
+            const loader = document.getElementById('loader');
+            loader.classList.add('hide');
+            setTimeout(() => loader.style.display = 'none', 600);
+        });
     </script>
 
 </body>

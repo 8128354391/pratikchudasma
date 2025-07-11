@@ -265,6 +265,7 @@ body {
     margin-top: 16px;
     filter: grayscale(1);
     box-shadow: 0 4px 32px rgba(0, 0, 0, 0.07);
+    opacity: 1 !important;
 }
 
 .main-right {
@@ -720,7 +721,7 @@ body {
     .services-title {
         font-family: variable;
         width: 100%;
-        font-size: 3rem;
+        font-size: 2rem;
         font-weight: 500;
         letter-spacing: 2px;
         text-transform: uppercase;
@@ -1156,6 +1157,7 @@ body {
 .work-image {
     /* width: 100%; */
     max-width: 800px;
+    height: 700px;
     border-radius: 8px;
     /* box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4); */
     object-fit: cover;
@@ -1187,8 +1189,8 @@ body {
         font-family: variable;
         letter-spacing: 1.5px;
         width: 100%;
-        font-size: 3rem;
-        font-weight: 800;
+        font-size: 2rem;
+        font-weight: 500;
         letter-spacing: 2px;
         text-transform: uppercase;
         margin: 0;
@@ -2386,12 +2388,30 @@ body {
     position: fixed;
     z-index: 9999;
     inset: 0;
-    background: #111;
+    background: #000;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: opacity 2s ease; /* Slow fade-out (1.5s) */
+    transition: opacity 2s ease;
+    /* Slow fade-out (1.5s) */
+}
+
+.loader-overlay {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #e5e5e0;
+    /* or your preferred color */
+    transform: translateY(100%);
+    transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+    z-index: 1;
+}
+
+#loader.active .loader-overlay {
+    transform: translateY(0);
 }
 
 .loader-spinner {
@@ -2420,4 +2440,73 @@ body {
 #loader.hide {
     opacity: 0;
     pointer-events: none;
+}
+
+.scrolled-color {
+    color: #000;
+    /* Example: bright pink, change as you like */
+    transition: color 0.3s;
+}
+
+.main-title .header-link {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.main-title .header-link:hover {
+    color: #007bff;
+    /* Change to your preferred hover color */
+    text-shadow: 0 2px 8px rgba(0, 123, 255, 0.2);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+h4 a:hover,
+h5 a:hover,
+h6 a:hover {
+    color: #007bff;
+    text-shadow: 0 2px 8px rgba(0, 123, 255, 0.2);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    opacity: 0;
+    /* Start hidden, will be shown by animation */
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+#mainTitle {
+  opacity: 1 !important;
+}
+
+.profile-img {
+  opacity: 1 !important;
 }

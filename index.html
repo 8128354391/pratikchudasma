@@ -7,10 +7,12 @@
     <title>Pratik Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
-    
+
     <div id="loader">
         <div class="loader-overlay"></div>
         <div class="loader-spinner"></div>
@@ -20,22 +22,21 @@
     <header class="header">
         <div class="header-left">
             <span class="by-huy">By <strong>Pratik</strong><sup>©</sup></span>
-            <span class="subtitle">(Web Designer &amp; Developer)</span>
+            <span class="subtitle" id="subtitle">(Web Designer &amp; Developer)</span>
         </div>
         <nav class="header-right">
             <a href="#services">Services</a>
             <a href="#about">About</a>
-            <a href="#testimonials">Testimonials</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
     <main class="main-content">
 
-        <h1 class="main-title">Pratik Chudasama</h1>
+        <h1 class="main-title" id="mainTitle">Pratik Chudasama</h1>
 
         <div class="main-unified">
-            <div class="content-left">
+            <div class="content-left animate-bottom">
                 <div class="arrow">&#8594;</div>
                 <div class="description">
                     <p>I help growing brands and startups<br>gain an unfair advantage through<br>premium, results driven
@@ -43,7 +44,7 @@
                 </div>
                 <button class="book-call" id="bookCallBtn">BOOK A CALL <span class="arrow-up">↗</span></button>
             </div>
-            <div class="content-center">
+            <div class="content-center animate-bottom">
                 <img src="WhatsApp Image 2025-06-28 at 10.48.05_dd9844cc.jpg" alt="Profile" class="profile-img">
             </div>
             <div class="content-right">
@@ -79,9 +80,8 @@
                         delivering
                         seamless experiences with a focus on animation—keeping your audience engaged and returning.</p>
                     <ul class="services-list">
-                        <li><span>01</span> <strong>CMS Integration</strong></li>
-                        <li><span>02</span> <strong>Motion & Animations</strong></li>
-                        <li><span>03</span> <strong>3D Development</strong></li>
+                        <li><span>01</span> <strong>Motion & Animations</strong></li>
+                        <li><span>02</span> <strong>3D Development</strong></li>
                     </ul>
                 </div>
             </div>
@@ -109,8 +109,7 @@
 
     <section class="selected-works-section">
         <div class="selected-works-header">
-            <h2 class="selected-works-title">SELECTED WORKS <span class="slash">/</span> <span
-                    class="works-count">(5)</span></h2>
+            <h2 class="selected-works-title">SELECTED WORKS /</h2>
             <div class="services-description">
                 <span class="services-label">(PROJECTS)</span>
                 <p>Featured projects that have been meticulously crafted with passion to drive results and impact.</p>
@@ -121,30 +120,33 @@
 
             <div class="sticky-content">
                 <div class="selected-works-content">
-                    <span class="work-index">01.</span>
+                    <span class="work-index">01</span>
                     <div class="work-image-container">
-                        <img src="https://www.byhuy.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Ffwy0yv14lkat%2F6341UNQt7WLNHAFO88y1Rb%2Fd13b9f6db64ef43bd8eebd2443557abf%2FNorth_America_map_white_wall.webp&w=1920&q=75"
-                            alt="Project Screenshot" class="work-image">
+                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Project Screenshot"
+                            class="work-image">
+                        <video autoplay loop muted playsinline class="work-video" src="Simpera Video .mp4"></video>
                     </div>
                 </div>
             </div>
 
             <div class="sticky-content">
                 <div class="selected-works-content">
-                    <span class="work-index">02.</span>
+                    <span class="work-index">02</span>
                     <div class="work-image-container">
-                        <img src="https://www.byhuy.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Ffwy0yv14lkat%2FtiE4psfKJQLY5ZUH6X5Dn%2F3f866f01f194444f32bec03b2d681098%2F5.webp&w=1080&q=75"
-                            alt="Project Screenshot" class="work-image">
+                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Project Screenshot"
+                            class="work-image">
+                        <video autoplay loop muted playsinline class="work-video" src="Sarah Brown.mp4"></video>
                     </div>
                 </div>
             </div>
 
             <div class="sticky-content">
                 <div class="selected-works-content">
-                    <span class="work-index">03.</span>
+                    <span class="work-index">03</span>
                     <div class="work-image-container">
-                        <img src="https://www.byhuy.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Ffwy0yv14lkat%2F7fPKUH0ZVYQvSZzzyh3uL5%2F46a62c3bcda1859098f08d0b9d9d803e%2F1.webp&w=1920&q=75"
-                            alt="Project Screenshot" class="work-image">
+                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Project Screenshot"
+                            class="work-image">
+                        <video autoplay loop muted playsinline class="work-video" src="Rocersa video.mp4"></video>
                     </div>
                 </div>
             </div>
@@ -157,9 +159,9 @@
         <div class="hero-arrow">&#8599;</div>
         <div class="hero-content">
             <div class="hero-title">
-                <span>DESIGNER,</span><br>
-                <span>DEVELOPER,</span><br>
-                <span>CREATOR /</span>
+                <span class="animated-text" data-text="DESIGNER,">DESIGNER,</span><br>
+                <span class="animated-text" data-text="DEVELOPER,">DEVELOPER,</span><br>
+                <span class="animated-text" data-text="CREATOR /">CREATOR /</span>
             </div>
         </div>
         <div class="about-section">
@@ -186,42 +188,14 @@
         </div>
     </section>
 
-    <section class="testimonials-section">
-        <h1 class="testimonials-title">DON'T TAKE MY <br> WORD FOR IT /</h1>
-        <div class="testimonials-content">
-            <div class="testimonials-label">(TESTIMONIALS)</div>
-            <p class="testimonial-text">
-                Here's what my clients say about our collaboration. Their satisfaction and meeting expectations are
-                my top priorities, ensuring the best experience possible.
-            </p>
-        </div>
-    </section>
-
-    <section class="testimonial-slider">
-
-        <div class="testimonial-slider-content">
-            <div class="testimonial-slider-left">
-                <div class="testimonial-quote" id="testimonialQuote"></div>
-                <div class="testimonial-author" id="testimonialAuthor"></div>
-                <div class="testimonial-role" id="testimonialRole"></div>
-                <div class="testimonial-tags" id="testimonialTags"></div>
-                <div class="testimonial-slider-controls">
-                    <button id="testimonialPrev">PREV</button>
-                    <button id="testimonialNext">NEXT</button>
-                </div>
-            </div>
-            <div class="testimonial-slider-right">
-                <img id="testimonialImage" src="" alt="Testimonial Photo" />
-            </div>
-        </div>
-
-    </section>
-
     <section class="cta-section">
         <div class="cta-content">
             <div class="cta-subheading">(Need an unfair advantage?)</div>
             <h1 class="cta-title">LET'S MAKE<br>IT HAPPEN</h1>
-            <button class="cta-button">BOOK A CALL <span class="cta-arrow">↗</span></button>
+            <a href="https://wa.me/918128354391" target="_blank" rel="noopener" aria-label="WhatsApp">
+                <button class="cta-button"><i class="fa-brands fa-whatsapp fa-lg" style="color: #102a43;"></i>BOOK A
+                    CALL</button>
+            </a>
         </div>
         <div class="cta-corner cta-corner-left">
             <span class="cta-globe">
@@ -265,30 +239,20 @@
                     <li><a href="#">Github</a></li>
                 </ul>
             </div>
-            <div class="footer-col">
-                <h3>Resources</h3>
-                <ul>
-                    <li><a href="#">Pillarstack</a></li>
-                    <li><a href="#">Figma Templates</a></li>
-                    <li><a href="#">Monthly Newsletter</a></li>
-                </ul>
-            </div>
         </div>
 
         <div class="footer-bottom">
             <div class="footer-copyright">
                 <span>© 2024 Pratik Chudasama<br>All rights reserved.</span>
             </div>
-            <div class="footer-localtime">
-                <div>LOCAL TIME</div>
-                <div id="localTime"></div>
-            </div>
-            <button class="footer-top-btn" id="scrollTopBtn" title="Go to top">↑</button>
+            <!-- Local time section removed -->
+            <!-- <button class="footer-top-btn" id="scrollTopBtn" title="Go to top">↑</button> -->
         </div>
 
     </footer>
 
     <script src="script.js"></script>
+
     <script>
         // Initialize Lenis smooth scroll
         const lenis = new Lenis({
@@ -310,10 +274,266 @@
 
         requestAnimationFrame(raf);
 
-        window.addEventListener('load', function() {
+        window.addEventListener('load', function () {
             const loader = document.getElementById('loader');
             loader.classList.add('hide');
             setTimeout(() => loader.style.display = 'none', 600);
+        });
+
+        // Wait for DOM to load
+        document.addEventListener("DOMContentLoaded", function () {
+            // Create a GSAP timeline
+            const tl = gsap.timeline();
+
+            // Animate "By Pratik"
+            tl.from(".by-huy", {
+                y: 50,
+                opacity: 0,
+                duration: 1,
+                ease: "power3.out"
+            })
+                // Animate subtitle, slightly after
+                .from(".subtitle", {
+                    y: 50,
+                    opacity: 0,
+                    duration: 1,
+                    ease: "power3.out"
+                }, "-=0.5"); // Overlap the animations by 0.5s
+        });
+
+        // Typewriter effect for subtitle
+        document.addEventListener("DOMContentLoaded", function () {
+            const subtitle = document.getElementById("subtitle");
+            const text = subtitle.textContent;
+            subtitle.textContent = "";
+            let i = 0;
+            function typeWriter() {
+                if (i < text.length) {
+                    subtitle.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 50); // Adjust speed here
+                }
+            }
+            typeWriter();
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            gsap.from("#mainTitle", {
+                y: 60,
+                opacity: 0,
+                duration: 1.2,
+                ease: "power3.out"
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const mainTitle = document.getElementById("mainTitle");
+            const text = mainTitle.textContent;
+            mainTitle.innerHTML = "";
+            text.split("").forEach(char => {
+                const span = document.createElement("span");
+                span.textContent = char === " " ? "\u00A0" : char;
+                mainTitle.appendChild(span);
+            });
+
+            gsap.from("#mainTitle span", {
+                y: 40,
+                opacity: 0,
+                stagger: 0.05,
+                duration: 0.7,
+                ease: "power3.out"
+            });
+        });
+
+        // Split the .services-title text into spans
+        document.addEventListener("DOMContentLoaded", function () {
+            const servicesTitle = document.querySelector('.services-title');
+            const text = servicesTitle.textContent;
+            servicesTitle.innerHTML = '';
+            text.split('').forEach(char => {
+                const span = document.createElement('span');
+                span.textContent = char === " " ? "\u00A0" : char;
+                servicesTitle.appendChild(span);
+            });
+
+            // Register ScrollTrigger
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Animate each letter on scroll
+            gsap.from(".services-title span", {
+                scrollTrigger: {
+                    trigger: ".services-title",
+                    start: "top 80%", // when top of .services-title hits 80% of viewport
+                },
+                y: 60,
+                opacity: 0,
+                stagger: 0.05,
+                duration: 0.7,
+                ease: "power3.out"
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const worksTitle = document.querySelector('.selected-works-title');
+            if (!worksTitle) return;
+            const text = worksTitle.textContent;
+            worksTitle.innerHTML = '';
+            text.split('').forEach(char => {
+                const span = document.createElement('span');
+                span.textContent = char === " " ? "\u00A0" : char;
+                worksTitle.appendChild(span);
+            });
+
+            // Animate each letter on scroll
+            gsap.from(".selected-works-title span", {
+                scrollTrigger: {
+                    trigger: ".selected-works-title",
+                    start: "top 80%",
+                },
+                y: 60,
+                opacity: 0,
+                stagger: 0.05,
+                duration: 0.7,
+                ease: "power3.out"
+            });
+        });
+
+        window.addEventListener('scroll', function () {
+            // You can adjust this threshold as needed
+            const scrollThreshold = 100; // px
+
+            // Select the elements
+            const availability = document.querySelector('.availability');
+            const date = document.querySelector('.date');
+
+            if (window.scrollY > scrollThreshold) {
+                // Change to your desired color
+                availability.style.color = '#000000'; // Example: orange
+                date.style.color = '#000000';
+            } else {
+                // Revert to original color
+                availability.style.color = '';
+                date.style.color = '';
+            }
+        });
+
+        // Split each letter in .hero-title into a span
+        document.querySelectorAll('.hero-title span').forEach(line => {
+            const letters = line.textContent.split('');
+            line.innerHTML = letters.map(letter =>
+                `<span class="letter">${letter === ' ' ? '&nbsp;' : letter}</span>`
+            ).join('');
+        });
+
+        // Animate the letters with a stagger
+        gsap.fromTo(
+            '.hero-title .letter',
+            { opacity: 0, y: 40 },
+            {
+                opacity: 1,
+                y: 0,
+                stagger: 0.05,
+                duration: 0.6,
+                ease: "power2.out"
+            }
+        );
+
+        // Add some CSS for smoother animation
+        document.head.insertAdjacentHTML('beforeend', '<style>.hero-title .letter { display: inline-block; opacity: 0; transform: translateY(40px); }</style>');
+
+        document.addEventListener("DOMContentLoaded", function () {
+            gsap.to(".profile-img", {
+                opacity: 1,
+                duration: 1.2,
+                ease: "power3.out"
+            });
+        });
+
+        // Animate content-left on scroll trigger
+        document.addEventListener("DOMContentLoaded", function () {
+            gsap.registerPlugin(ScrollTrigger);
+            
+            gsap.fromTo(".animate-bottom", {
+                opacity: 0,
+                y: 60
+            }, {
+                opacity: 1,
+                y: 0,
+                duration: 1.2,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: ".animate-bottom",
+                    start: "top 80%",
+                    end: "bottom 20%",
+                    toggleActions: "play none none reverse"
+                }
+            });
+        });
+
+        // Animate the content-right text using GSAP timeline
+        document.addEventListener("DOMContentLoaded", function () {
+            // Create a timeline for the content-right section
+            const contentRightTl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".content-right",
+                    start: "top 80%",
+                    end: "bottom 20%",
+                    toggleActions: "play none none reverse"
+                }
+            });
+
+            // Split the availability text into individual characters
+            const availability = document.querySelector('.availability');
+            const availabilityText = availability.textContent;
+            availability.innerHTML = '';
+            availabilityText.split('').forEach(char => {
+                const span = document.createElement('span');
+                span.textContent = char === ' ' ? '\u00A0' : char;
+                span.style.display = 'inline-block';
+                span.style.opacity = '0';
+                span.style.transform = 'translateY(20px)';
+                availability.appendChild(span);
+            });
+
+            // Split the date text into individual characters
+            const date = document.querySelector('.date');
+            const dateText = date.textContent;
+            date.innerHTML = '';
+            dateText.split('').forEach(char => {
+                const span = document.createElement('span');
+                span.textContent = char === ' ' ? '\u00A0' : char;
+                span.style.display = 'inline-block';
+                span.style.opacity = '0';
+                span.style.transform = 'translateY(20px)';
+                date.appendChild(span);
+            });
+
+            // Animate availability text first
+            contentRightTl.fromTo('.availability span', {
+                opacity: 0,
+                y: 20,
+                rotationX: -90
+            }, {
+                opacity: 1,
+                y: 0,
+                rotationX: 0,
+                duration: 0.6,
+                stagger: 0.03,
+                ease: "back.out(1.7)"
+            })
+            // Then animate date text with a slight delay
+            .fromTo('.date span', {
+                opacity: 0,
+                y: 20,
+                rotationX: -90
+            }, {
+                opacity: 1,
+                y: 0,
+                rotationX: 0,
+                duration: 0.6,
+                stagger: 0.03,
+                ease: "back.out(1.7)"
+            }, "-=0.3"); // Start slightly before the previous animation ends
         });
     </script>
 
